@@ -1,0 +1,249 @@
+.delivery-calculator {
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 32px;
+  font-family: "Omnes", -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #202125;
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.delivery-calculator:hover {
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
+}
+
+.fancy-input {
+  transition: all 0.2s ease;
+  background: #f8f8f8;
+}
+
+.fancy-input:hover {
+  background: #ffffff;
+  border-color: #d0d0d0;
+}
+
+.fancy-input:focus {
+  background: #ffffff;
+  border-color: #01c0e5;
+  box-shadow: 0 0 0 4px rgba(1, 192, 229, 0.1);
+  transform: translateY(-1px);
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ff4d4f;
+  font-size: 14px;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background-color: #fff2f0;
+  border-radius: 8px;
+  animation: slideIn 0.2s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fancy-button {
+  transition: all 0.2s ease;
+}
+
+.get-location:hover {
+  background: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+.calculate-button:hover {
+  background: #01a3c2;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(1, 192, 229, 0.2);
+}
+
+.calculate-button:active {
+  transform: translateY(0);
+}
+
+input.error {
+  background-color: #fff2f0;
+  border-color: #ff4d4f;
+  animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+h1, h2 {
+  font-family: "Omnes", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: bold;
+  color: #202125;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 24px 0;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  height: 44px;
+  padding: 0 16px;
+  border: 2px solid #e7e7e7;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: "Omnes", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #01c0e5;
+}
+
+.form-group input.error {
+  background-color: #fff2f0;
+  border-color: #ff4d4f;
+}
+
+.button-container {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+button {
+  font-family: "Omnes", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.get-location {
+  padding: 0 16px;
+  height: 44px;
+  background: #f8f8f8;
+  border: 2px solid #e7e7e7;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+.calculate-button {
+  flex: 1;
+  height: 44px;
+  background: #01c0e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.calculation-results {
+  margin-top: 32px;
+  padding: 32px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  font-family: "Omnes", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #e7e7e7;
+  font-size: 16px;
+  font-weight: bold;
+  color: #202125;
+}
+
+.result-item.distance {
+  border-bottom: 2px solid #e7e7e7;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.result-item.surcharge {
+  color: #ff4d4f;
+  border-bottom: 2px solid #e7e7e7;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.result-item.total {
+  border-bottom: none;
+  padding-top: 16px;
+  color: #01c0e5;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.error-message.out-of-range {
+  margin-top: 24px;
+  background-color: #fff2f0;
+  border: 1px solid #ffccc7;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: slideIn 0.2s ease;
+}
+
+.calculate-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background-color: #80e0f2;
+}
+
+.calculate-button:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Remove arrows/spinners from number inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+  appearance: textfield;
+}
